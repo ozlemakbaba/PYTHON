@@ -1,0 +1,20 @@
+#10 Elemanlı rastgele oluşturulan bir dizideki en büyük ve en küçük sayıyı bulan program
+from random import randint
+
+sayilar = []
+for i in range(0, 10):
+    rand = randint(0, 9)
+    sayilar.append(rand)
+    print(rand)
+
+minNumber = sayilar[0]
+maxNumber = sayilar[0]
+
+for i in range(0, 10):
+    if minNumber > sayilar[i]:
+        minNumber = sayilar[i]
+    if maxNumber < sayilar[i]:
+        maxNumber = sayilar[i]
+
+print("Dizideki En Büyük Değer    : > > >{0} ".format(maxNumber))
+print("Dizideki En Küçük Değer    : > > >{0} ".format(minNumber))
