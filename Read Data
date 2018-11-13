@@ -1,0 +1,17 @@
+import openpyxl
+wb = openpyxl.load_workbook('Kitap1.xlsx')
+sheet = wb['Sayfa1']
+hList = []
+tlist=[]
+tyas=0
+for cell in sheet['A']:
+    satir=str(cell.value)
+    if(satir.__contains__(',')):
+        bolum=satir.split(',')
+        hucresayisi=bolum.__len__()
+        hList=[]
+        for alan in bolum:
+            hList.append(str(alan))
+            print(bolum[2])
+        tlist.append(hList)
+print(tlist)
